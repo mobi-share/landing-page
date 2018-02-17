@@ -1,0 +1,64 @@
+<!DOCTYPE html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="Mobi is a ridesharing application that encourages people to share a ride to and from work." />
+		<meta name="keywords" content="Mobi, Mobishare, Ride, Rideshare, Ride Sharing" />
+        <meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Watch the video" />
+		<meta property="og:description" content="https://www.facebook.com/mobiridesharing/" />
+		<meta property="og:site_name" content="@mobiridesharing" />
+        <meta property="og:url" content="http://www.mobishare.com.au" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <base href="/">
+        <title>Mobi</title>
+        <link rel="icon" type="image/x-icon" href="${require('./assets/images/favicon.ico')}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    </head>
+    <body layout="row" layout-fill>
+        <div layout="column" layout-fill>
+            <md-toolbar class="header-toolbar" 
+                layout="row" layout-align="center center" md-whiteframe="3">
+                <div class="md-toolbar-tools">
+                    <img class="logo" src="./assets/images/logo.png" alt="logo" width="30"></img>
+                    <h3 flex>
+                        <a href="/">Mobi</a>
+                    </h3>
+                    <md-button class="md-icon-button"
+                        href="https://m.facebook.com/profile.php?id=369549266721040"
+                        target="_blank"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </md-button>
+                    <md-button class="md-icon-button"
+                        href="https://twitter.com/Mobirideshare?s=07"
+                        target="_blank"
+                        aria-label="Twitter">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </md-button>
+                    <md-button class="md-icon-button" 
+                        href="https://www.instagram.com/mobiridesharing/"
+                        target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </md-button>
+                    <md-button class="md-icon-button" 
+                        href="https://au.linkedin.com/company/mobi-ridesharing"
+                        target="_blank"
+                        aria-label="Linked In">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content layout="column" flex layout-fill>
+                <app-component layout="column" layout-fill></app-component>
+            </md-content>
+        </div>
+    </body>
+</html>
