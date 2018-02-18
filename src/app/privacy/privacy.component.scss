@@ -4,6 +4,10 @@ ol {
     counter-reset: item;
 }
 
+li {
+    padding-top: 10px;
+}
+
 ol > li {
     counter-increment: item;
 }
