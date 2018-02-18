@@ -4,6 +4,8 @@ import './home.component.scss';
 
 class HomeController implements IComponentController {
 
+    public user = <{email: string, postcode: string}>{};
+
     static $inject = ['$scope', '$state'];
 
     constructor(

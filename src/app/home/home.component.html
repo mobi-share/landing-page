@@ -1,17 +1,17 @@
 <section class="landing-section" hide-xs>
-    <div class="landing-section-shape-overlay"></div>
     <div class="landing-section-content-overlay">
-        <h1>Mobi</h1>
-        <h3>Rideshare on your commute</h3>
-        <p style="max-width: 300px; text-align:left;">
-            Mobi is a ridesharing app that will allow people heading in the same direction 
-            the ability to connect with each other so they can rideshare on their commute.
-        </p>
-    </div>
-    <div class="landing-section-image-overlay">
-        <img src="../../assets/images/app-preview.png"
-            alt="Image of mobile phone displaying the Mobi app">
-    </div>
+        <div class="content-container" layout="row" layout-align="center center">
+            <div flex-gt-xs="50">
+                <div class="text-container">
+                    <h1>Mobi</h1>
+                    <h3>Rideshare on your commute</h3>
+                </div>
+            </div>
+            <div flex-gt-xs="50">
+                <img src="../../assets/images/app-preview.png"
+                alt="Image of mobile phone displaying the Mobi app">
+            </div>
+        </div>
 </section>
 <section class="text-center mobile-landing-section" hide-gt-xs>
     <h1>Mobi</h1>
@@ -19,6 +19,31 @@
     <img src="../../assets/images/app-preview.png"
             alt="Image of mobile phone displaying the Mobi app">
 </section>
+<section class="content-section" layout="column">
+    <div class="text-center">
+        <h1>What is Mobi?</h1>
+    </div>
+    <div layout="column" layout-padding>
+        <div>
+            <p style="max-width: 560px; margin: 0 auto;">
+                Mobi is a ridesharing app that will allow people heading in the same direction 
+                the ability to connect with each other so they can rideshare on their commute.
+            </p>
+        </div>
+        <div>
+            <div class="video-panel">
+                <div class="video-decoration">
+                    <div class="video-container">
+                        <iframe width="560" height="349" frameborder="0" allowfullscreen
+                            src="//www.youtube.com/embed/3DLmqsRRARM?&wmode=transparent&rel=0&showinfo=0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr class="breakpoint"/>
 <section class="content-section" layout="column">
     <div class="text-center">
         <h1>How does Mobi work?</h1>
@@ -98,14 +123,28 @@
         </div>
     </div>
 </section>
+<br/>
+<br/>
 <section class="feature-panel">
-    <div class="video-panel">
-        <div class="video-decoration">
-            <div class="video-container">
-                <iframe width="560" height="349" frameborder="0" allowfullscreen
-                    src="//www.youtube.com/embed/3DLmqsRRARM?&wmode=transparent&rel=0&showinfo=0">
-                </iframe>
-            </div>
+    <div class="text-center mailing-list-panel" layout="column" layout-padding>
+        <h2>Stay up to date with our Mailing list</h2>
+        <p>Enter your details for exclusive pre-launch offers!</p>
+        <div class="mailing-list-container">
+            <form class="full-width" name="userForm">
+                <md-input-container class="full-width">
+                    <label>Email</label>
+                    <input ng-model="vm.user.email" type="email" required/>
+                </md-input-container>
+                <br/>
+                <md-input-container class="full-width">
+                    <label>Postcode</label>
+                    <input ng-model="vm.user.postcode" type="text" pattern="[0-9]{4-5}" required/>
+                </md-input-container>
+                <br/>
+                <md-input-container class="full-width">
+                    <md-button class="md-raised" type="submit">Sign Up</md-button>
+                </md-input-container>
+            </form>
         </div>
     </div>
 </section>
