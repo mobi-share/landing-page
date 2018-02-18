@@ -6,7 +6,7 @@ class HomeController implements IComponentController {
 
     public userForm: any;
     public user = <{email: string, postcode: string}>{};
-    private url: string = "";
+    private url: string = "https://script.google.com/macros/s/AKfycbxD-_ALl6hUb99I4wGYV5XWeEeg1jlPjOddc4AvZlN4vFOWSoo/exec";
     static $inject = ['$scope', '$state', '$http', '$mdToast'];
 
     constructor(
@@ -27,14 +27,22 @@ class HomeController implements IComponentController {
 
     sendFormData() {
         if (this.userForm.$valid) {
-            this.$mdToast.show(
-                this.$mdToast.simple()
-                .textContent("Thanks for signing up!")
-                .position('top right')
-            );
             this.$http.get(this.url, {
-                data: this.userForm.serializeObject(),
+                params: this.user,
+                // data: angular.toJson(this.user),
                 responseType: "json"
+            }).then(() => {
+                this.$mdToast.show(
+                    this.$mdToast.simple()
+                    .textContent("Thanks for signing up!")
+                    .position('top right')
+                );
+            }, () => {
+                this.$mdToast.show(
+                    this.$mdToast.simple()
+                    .textContent("There was an error submitting your details! Please refresh the page and try again." )
+                    .position('top right')
+                );
             });
         } else {
             this.$mdToast.show(
