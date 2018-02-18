@@ -35,7 +35,7 @@
                 <div class="video-decoration">
                     <div class="video-container">
                         <iframe width="560" height="349" frameborder="0" allowfullscreen
-                            src="//www.youtube.com/embed/3DLmqsRRARM?&wmode=transparent&rel=0&showinfo=0">
+                            src="https://www.youtube.com/embed/3DLmqsRRARM">
                         </iframe>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
         <h2>Stay up to date with our Mailing list</h2>
         <p>Enter your details for exclusive pre-launch offers!</p>
         <div class="mailing-list-container">
-            <form class="full-width" name="userForm">
+            <form class="full-width" name="vm.userForm">
                 <md-input-container class="full-width">
                     <label>Email</label>
                     <input ng-model="vm.user.email" type="email" required/>
@@ -138,10 +138,10 @@
                 <br/>
                 <md-input-container class="full-width">
                     <label>Postcode</label>
-                    <input ng-model="vm.user.postcode" type="text" pattern="[0-9]{4-5}" required/>
+                    <input ng-model="vm.user.postcode" type="text" required/>
                 </md-input-container>
                 <br/>
-                <md-input-container class="full-width">
+                <md-input-container class="full-width" ng-click="vm.sendFormData()">
                     <md-button class="md-raised" type="submit">Sign Up</md-button>
                 </md-input-container>
             </form>

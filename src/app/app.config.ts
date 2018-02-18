@@ -1,7 +1,5 @@
 import { ICompileProvider } from 'angular';
-import { StateProvider, StateDeclaration } from 'angular-ui-router';
-
-import { loadLazyState, resolveLazyState } from './shared/util.service';
+import { StateProvider } from 'angular-ui-router';
 
 function configure($compileProvider: ICompileProvider, $stateProvider: StateProvider) {
 
@@ -9,24 +7,12 @@ function configure($compileProvider: ICompileProvider, $stateProvider: StateProv
 
     $compileProvider.debugInfoEnabled(!isProductionBuild);
 
-    $stateProvider.state("home", <StateDeclaration>{
-        lazyLoad: loadLazyState(function (resolve, $ocLazyLoad) {
-            require.ensure([], function () {
-                let lazyModule: any = require('./home/home.module');
-                resolveLazyState(lazyModule, resolve, $ocLazyLoad);
-            }, "home");
-        }),
-        component: "homeComponent",
-        url: '/'
-    }).state("privacy", <StateDeclaration>{
-        lazyLoad: loadLazyState(function (resolve, $ocLazyLoad) {
-            require.ensure([], function () {
-                let lazyModule: any = require('./privacy/privacy.module');
-                resolveLazyState(lazyModule, resolve, $ocLazyLoad);
-            }, "privacy");
-        }),
-        component: "privacyComponent",
-        url: '/privacy'
+    $stateProvider.state("home", {
+        url: "/",
+        component: "homeComponent"
+    }).state("privacy", {
+        url: '/privacy',
+        component: "privacyComponent"
     });
 }
 
